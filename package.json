@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "基于 vue-cli3 的 UI 组件库",
   "main": "lib/xr-ui.umd.min.js",
-  "keywords": ["xueui-demo"],
+  "keywords": [
+    "xueui-demo"
+  ],
   "private": false,
   "license": "MIT",
   "scripts": {
@@ -15,7 +17,8 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.7"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
@@ -30,6 +33,8 @@
     "eslint-plugin-vue": "^5.0.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "vue-loader": "^15.7.1",
+    "vue-markdown-loader": "^2.4.1",
     "vue-template-compiler": "^2.6.10"
   }
 }
