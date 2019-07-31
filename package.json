@@ -36,6 +36,8 @@
     "markdown-it": "^9.0.1",
     "markdown-it-anchor": "^5.2.4",
     "markdown-it-container": "^2.0.0",
+    "markdown-it-decorate": "^1.2.2",
+    "markdown-it-task-checkbox": "^1.0.6",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "striptags": "^3.1.1",

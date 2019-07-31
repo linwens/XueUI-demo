@@ -2,65 +2,71 @@
 const slugify = require('transliteration').slugify
 const striptags = require('./strip-tags')
 const hljs = require('highlight.js')
-const convert = require('./utils.js').convert
-const wrap = require('./utils.js').wrap
+const utils = require('./utils.js')
 
-const md = require('markdown-it')({
-  html: true,
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return '<pre class="hljs"><code>' + hljs.highlight(lang, str, true).value + '</code></pre>'
-      } catch (__) {}
+// 使用组件
+const md = require('markdown-it')()
+const MarkdownItAnchor = require('markdown-it-anchor')
+const MarkdownItContainer = require('markdown-it-container')
+const MarkdownItCheckBox = require('markdown-it-task-checkbox')
+const MarkdownItDec = require('markdown-it-decorate')
+
+const vueMarkdown = {
+  raw: true, //
+  preprocess: (MarkdownIt, source) => {
+    MarkdownIt.renderer.rules.table_open = function () {
+      return '<table class="table">'
     }
-
-    return '<pre v-pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>'
-  }
-}).use(require('markdown-it-anchor'), {
-  level: 2,
-  slugify: slugify,
-  permalink: true,
-  permalinkBefore: true
-}).use(require('markdown-it-container'), 'demo', {
-  validate: function (params) {
-    return params.trim().match(/^demo\s*(.*)$/);
+    // ```html``` 给这种样式加个class hljs
+    MarkdownIt.renderer.rules.fence = utils.wrap(
+      MarkdownIt.renderer.rules.fence
+    )
+    // ```code``` 给这种样式加个class code_inline
+    const codeInline = MarkdownIt.renderer.rules.code_inline
+    MarkdownIt.renderer.rules.code_inline = function (...args) {
+      args[0][args[1]].attrJoin('class', 'code_inline')
+      return codeInline(...args)
+    }
+    return source
   },
-  render: function (tokens, idx) {
-    var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/)
-    if (tokens[idx].nesting === 1) {
-      // 获取正则捕获组中的描述内容,即::: demo xxx中的xxx
-      var description = (m && m.length > 1) ? m[1] : ''
-      // 获得内容
-      var content = tokens[idx + 1].content
-      // 解析过滤解码生成html字符串
-      var html = convert(striptags.strip(content, ['script', 'style'])).replace(/(<[^>]*)=""(?=.*>)/g, '$1')
-      // 获取script中的内容
-      var script = striptags.fetch(content, 'script')
-      // 获取style中的内容
-      var style = striptags.fetch(content, 'style')
-      // 组合成prop参数,准备传入组件
-      var jsfiddle = { html: html, script: script, style: style };
-      // 是否有描述需要渲染
-      var descriptionHTML = description
-        ? md.render(description)
-        : ''
-      // 将jsfiddle对象转换为字符串,并将特殊字符转为转义序列
-      jsfiddle = md.utils.escapeHtml(JSON.stringify(jsfiddle))
-      // 起始标签,写入demo-block模板开头,并传入参数
-      return `<demo-block class="demo-box" :jsfiddle="${jsfiddle}">
-                <div class="source" slot="source">${html}</div>
-                ${descriptionHTML}
-                <div class="highlight" slot="highlight">`
-    }
-    return '</div></demo-block>\n'
-  }
-}).use(require('markdown-it-container'), 'tip'
-).use(require('markdown-it-container'), 'warning')
+  // highlight: function (str, lang) {
+  //   if (lang && hljs.getLanguage(lang)) {
+  //     try {
+  //       return '<pre class="hljs"><code>' + hljs.highlight(lang, str, true).value + '</code></pre>'
+  //     } catch (__) {}
+  //   }
 
-module.exports = function (MarkdownIt, source) {
-  MarkdownIt.renderer.rules.table_open = function () {
-    return '<table class="table">'
-  }
-  MarkdownIt.renderer.rules.fence = wrap(MarkdownIt.renderer.rules.fence)
-  return source
+  //   return '<pre v-pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>'
+  // },
+  use: [
+    [MarkdownItAnchor, {
+      level: 2, // 添加超链接锚点的最小标题级别, 如: #标题 不会添加锚点
+      slugify: slugify, // 自定义slugify, 我们使用的是将中文转为汉语拼音,最终生成为标题id属性
+      permalink: true, // 开启标题锚点功能
+      permalinkBefore: true // 在标题前创建锚点
+    }],
+    // 'markdown-it-container'的作用是自定义代码块
+    [
+      MarkdownItContainer,
+      'demo',
+      {
+        validate: params => params.trim().match(/^demo\s*(.*)$/),
+        render: function (tokens, idx) {
+          if (tokens[idx].nesting === 1) {
+            return `<demo-block>
+                        <div slot="highlight">`
+          }
+          return '</div></demo-block>\n'
+        }
+      }
+    ],
+    [MarkdownItContainer, 'tip'],
+    [MarkdownItContainer, 'warning'],
+    [MarkdownItCheckBox, {
+      disabled: true
+    }],
+    [MarkdownItDec]
+  ]
 }
+
+exports.vueMarkdown = vueMarkdown
