@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view class="view"/>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import './assets/scss/index';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
