@@ -37,6 +37,11 @@
           "path": "/test"
         },
         {
+          "desc": "icon",
+          "name": "icon",
+          "path": "/icon"
+        },
+        {
           "desc": "info",
           "name": "info",
           "path": "/info"
