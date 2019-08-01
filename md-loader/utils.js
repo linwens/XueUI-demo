@@ -10,8 +10,8 @@ function convert (str) {
 function wrap (render) {
   return function () {
     return render.apply(this, arguments)
-                .replace('<code v-pre class="', '<code class="hljs')
-                .replace('<code>', '<code class="hljs">')
+      .replace('<code v-pre class="', '<code class="hljs')
+      .replace('<code>', '<code class="hljs">')
   }
 }
 

@@ -18,6 +18,16 @@
 <vue-cards-icon name="cards-playing-outline" :size="16"></vue-cards-icon>
 <vue-cards-icon name="cards" :size="16"></vue-cards-icon>
 <vue-cards-icon name="close" :size="16"></vue-cards-icon>
+
+<script>
+  export default {
+    methods: {
+      hello() {
+        alert('Hello World!');
+      }
+    }
+  }
+</script>
 ```
 
 :::
