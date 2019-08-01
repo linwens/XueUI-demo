@@ -1,3 +1,5 @@
+# 把一些发布npm包的命令集合在了一起，包括很多git和npm操作
+
 git checkout master
 git merge develop
 

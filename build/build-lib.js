@@ -1,5 +1,5 @@
 /**
- * Build npm lib
+ * 做一些发布npm包前的构建准备，包括构建入口文件、构建库、构建样式文件等
  */
 const shell = require('shelljs')
 const signale = require('signale')

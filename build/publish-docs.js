@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+
+/**
+ * 一键发布文档到本仓库的gh-pages分支
+ */
 const execSync = require('child_process').execSync
 const VERSION = require('../package.json').version
 const GIT_COMMIT = execSync('git rev-parse --short HEAD').toString().replace(/\n/, '')
@@ -20,4 +24,4 @@ ghpages.publish('dist', {
   },
   repo: 'https://github.com/Eamonnzhang/vue-cards.git',
   message: `[deploy] ${GIT_COMMIT} - [release] ${VERSION}`
-});
+})

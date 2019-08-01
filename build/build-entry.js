@@ -1,3 +1,8 @@
+
+/**
+ * 根据get-components.js的结果，然后将代码写入/packages/index.js，生成入口文件
+ */
+
 const fs = require('fs-extra')
 const path = require('path')
 const uppercamelize = require('uppercamelcase')
