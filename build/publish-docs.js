@@ -19,9 +19,9 @@ const ghpages = require('gh-pages')
 execSync('npm run build:docs')
 ghpages.publish('dist', {
   user: {
-    name: 'EamonnZhang',
-    email: '5eamonn99@gmail.com'
+    name: 'linwens',
+    email: 'lws200841001@gmail.com'
   },
-  repo: 'https://github.com/Eamonnzhang/vue-cards.git',
+  repo: 'https://github.com/linwens/xueui-demo.git',
   message: `[deploy] ${GIT_COMMIT} - [release] ${VERSION}`
 })

@@ -1,6 +1,17 @@
 # 学习记录
 ----
 
+# 需要处理的一些问题
+
+- ` gulp watch ` 报找不到文件的错误
+- ` markdown ` 转 ` html `需要本地化一下
+- ` md.scss ` 需要本地化一下
+- ` packages.json ` 执行脚本集成
+- ` CHANGELOG ` 增加更新日志
+- ` github page ` 自动发布到github page  OK
+
+----
+
 # examples
 
 相当于一个vue的单页项目，主要用来展示UI库的说明文档的页面
@@ -41,8 +52,13 @@
 
 写一些执行脚本
 
+## build/publish-docs.js
+
+通过gh-pages打包静态资源直接发布到GitHub page; 注意要做项目地址建一个gh-pages分支，用来存放打包后页面
+
 ----
 
 # md-loader
 
 Markdown -> vue 的解析逻辑
+

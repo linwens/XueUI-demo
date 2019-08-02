@@ -10,21 +10,22 @@
 直接通过<!-- {.md} -->设置类名为 `xu-icon-iconName` 来使用即可。例如：
 
 <div class="demo-block">
-  <xu-icon class="xu-icon-taobao"></xu-icon>
-  <xu-icon class="xu-icon-github"></xu-icon>
-  <xu-icon class="xu-icon-facebook"></xu-icon>
+  <xu-icon class="xu-icon-taobao fs-24"></xu-icon>
+  <xu-icon class="xu-icon-github fs-24"></xu-icon>
+  <xu-icon class="xu-icon-facebook fs-24"></xu-icon>
 </div>
 
 :::demo
 ```html
-<xu-icon class="xu-icon-taobao"></xu-icon>
-<xu-icon class="xu-icon-github"></xu-icon>
-<xu-icon class="xu-icon-facebook"></xu-icon>
+<xu-icon class="xu-icon-taobao fs-24"></xu-icon>
+<xu-icon class="xu-icon-github fs-24"></xu-icon>
+<xu-icon class="xu-icon-facebook fs-24"></xu-icon>
 
 ```
 :::
 
 ### 图标集合
+<!-- {.md} -->
 
 <ul class="icon-list">
   <li v-for="name in $icon" :key="name">

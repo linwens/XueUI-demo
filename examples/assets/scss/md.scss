@@ -54,15 +54,15 @@ section.view {
   h5.md {
     margin: 16px 0;
     line-height: 1.5;
-    &+ul {
-      margin: 16px 0;
-      padding-left: 24px;
-      list-style: disc;
-      color: #3f536e;
-      li {
-        line-height: 1.8;
-      }
-    }
+    // &+ul {
+    //   margin: 16px 0;
+    //   padding-left: 24px;
+    //   list-style: disc;
+    //   color: #3f536e;
+    //   li {
+    //     line-height: 1.8;
+    //   }
+    // }
   }
   h2.md {
     font-size: 18px;

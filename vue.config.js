@@ -2,6 +2,8 @@ const path = require('path')
 const vueMarkdown = require('./md-loader').vueMarkdown
 
 module.exports = {
+  publicPath: '/xueui-demo',
+  parallel: false,
   // 修改 pages 入口
   pages: {
     index: {
