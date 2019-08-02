@@ -1,24 +1,22 @@
 {
-  "name": "vv-ui-theme-default",
+  "name": "xueui-demo",
   "version": "1.0.0",
-  "description": "vv-ui component default theme.",
+  "description": "xueui-demo component default thems",
   "main": "lib/index.css",
   "scripts": {
-    "dev": "gulp build && gulp watch",
+    "dev": "gulp build && gulp",
     "build": "gulp build"
   },
   "keywords": [
-    "vv-ui",
-    "theme"
+    "xueui"
   ],
-  "author": "monkeywang",
+  "author": "linwens",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-postcss": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "postcss-salad": "^1.0.5"
-  },
-  "dependencies": {}
+    "postcss-salad": "^2.0.1"
+  }
 }

@@ -3,14 +3,20 @@
 
 # 需要处理的一些问题
 
-- ` gulp watch ` 报找不到文件的错误
+- OK(升级为gulp4) ` gulp watch ` 报找不到文件的错误
 - ` markdown ` 转 ` html `需要本地化一下
 - ` md.scss ` 需要本地化一下
 - ` packages.json ` 执行脚本集成
 - ` CHANGELOG ` 增加更新日志
-- ` github page ` 自动发布到github page  OK
+- ` unit test ` 单元测试编写
 
 ----
+
+# package.json
+
+- ` lib ` : 打包发布UI库
+- ` build:entry ` : 添加新组件后自动install组件
+- ` publish:docs ` : 打包发布文档页面
 
 # examples
 

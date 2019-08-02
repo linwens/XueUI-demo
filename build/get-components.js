@@ -7,7 +7,7 @@ const path = require('path')
 
 const excludes = [
   'index.js',
-  'theme-chalk',
+  'theme-default',
   'mixins',
   'utils',
   '.DS_Store'

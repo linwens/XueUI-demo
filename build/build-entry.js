@@ -1,5 +1,6 @@
 
 /**
+ * 自动生成packages下的index.js文件，用于导出组件
  * 根据get-components.js的结果，然后将代码写入/packages/index.js，生成入口文件
  */
 
@@ -16,15 +17,15 @@ const tips = `/* eslint-disable */
 // const root = path.join(__dirname, '../')
 // const join = dir => path.join(root, dir)
 
-function buildPackagesEntry() {
+function buildPackagesEntry () {
   const uninstallComponents = []
 
   const importList = Components.map(
-    name => `import ${uppercamelize(name)} from './${name}'`
+    name => `import ${uppercamelize('xu-' + name)} from './${name}'`
   )
-  const exportList = Components.map(name => `${uppercamelize(name)}`)
+  const exportList = Components.map(name => `${uppercamelize('xu-' + name)}`)
   const intallList = exportList.filter(
-    name => !~uninstallComponents.indexOf(uppercamelize(name))
+    name => !~uninstallComponents.indexOf(uppercamelize('xu-' + name))
   )
   const content = `${tips}
 ${importList.join('\n')}
@@ -54,6 +55,5 @@ export default {
 
   fs.writeFileSync(path.join(__dirname, '../packages/index.js'), content)
 }
-
 
 buildPackagesEntry()
