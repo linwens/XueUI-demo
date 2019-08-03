@@ -1,6 +1,6 @@
 // 为组件提供 install 方法，供组件对外按需引入
-import XrTest from './src/test'
-XrTest.install = Vue => {
-  Vue.component(XrTest.name, XrTest)
+import XuTest from './src/test'
+XuTest.install = Vue => {
+  Vue.component(XuTest.name, XuTest)
 }
-export default XrTest
+export default XuTest

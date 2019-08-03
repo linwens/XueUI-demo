@@ -42,6 +42,11 @@
           "path": "/icon"
         },
         {
+          "desc": "button",
+          "name": "button",
+          "path": "/button"
+        },
+        {
           "desc": "info",
           "name": "info",
           "path": "/info"
