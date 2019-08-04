@@ -1,3 +1,12 @@
+
+<style lang="scss">
+  .demo-block {
+    .xu-button + .xu-button {
+      margin-left:10px;
+    }
+  }
+</style>
+
 # Button 按钮
 <!-- {.md} -->
 ----
@@ -149,6 +158,7 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 <xu-button>默认尺寸</xu-button>
 <xu-button size="medium">中等按钮</xu-button>
 <xu-button size="small">小型按钮</xu-button>
+<xu-button size="mini">小型按钮</xu-button>
 
 ```
 :::

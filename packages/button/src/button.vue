@@ -6,7 +6,7 @@
     :class="[
     'xu-button--'+type,
     {'is-plain': plain, 'is-disabled': disabled, 'is-round': round},
-    'xu-button--size-'+size
+    'xu-button--'+size
     ]"
   >
     <i v-if="icon !== ''" :class="icon"></i>
