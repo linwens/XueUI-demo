@@ -43,6 +43,8 @@
     "markdown-it-task-checkbox": "^1.0.6",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "sinon": "^7.4.1",
+    "sinon-chai": "^3.3.0",
     "striptags": "^3.1.1",
     "transliteration": "^2.1.4",
     "uppercamelcase": "^3.0.0",

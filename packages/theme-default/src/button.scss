@@ -253,13 +253,26 @@
   @include when(opacity) {
     opacity: 0.6;
   }
-  @include when(disabled) {
-    cursor: not-allowed;
-  }
   @include when(shadow) {
     box-shadow: 0px 4px 12px 0px rgba(53, 86, 189, 0.3);
   }
   @include when(square) {
     border-radius: 0px
+  }
+  @include when(loading) {
+    position: relative;
+    pointer-events: none;
+
+    &:before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: inherit;
+      background-color: rgba(255,255,255,.35);
+    }
   }
 }

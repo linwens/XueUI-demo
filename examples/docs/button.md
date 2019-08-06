@@ -128,7 +128,6 @@
 设置```icon```属性即可，icon 的列表可以参考 VV-UI 的 icon 组件，也可以设置在文字右边的 icon ，只要使用```i```标签即可，可以使用自定义图标。
 <div class="demo-block">
   <xu-button icon="xu-icon-taobao" type="primary"></xu-button>
-  <xu-button icon="xu-icon-loading" type="primary"></xu-button>
   <xu-button icon="xu-icon-google" type="primary">谷歌</xu-button>
 </div>
 
@@ -136,12 +135,27 @@
 ```html
 
   <xu-button icon="xu-icon-taobao" type="primary"></xu-button>
-  <xu-button icon="xu-icon-loading" type="primary"></xu-button>
   <xu-button icon="xu-icon-google" type="primary">谷歌</xu-button>
 
 ```
 :::
 
+### 加载状态
+<!-- {.md} -->
+
+可用于点击后的状态
+设置```loading```属性可展示正在加载的状态。
+<div class="demo-block">
+  <xu-button loading type="primary">加载中</xu-button>
+</div>
+
+::: demo
+```html
+
+  <xu-button loading type="primary">加载中</xu-button>
+
+```
+:::
 
 ### 不同尺寸
 <!-- {.md} -->

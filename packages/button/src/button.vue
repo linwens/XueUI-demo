@@ -5,11 +5,12 @@
     :disabled="disabled"
     :class="[
     'xu-button--'+type,
-    {'is-plain': plain, 'is-disabled': disabled, 'is-round': round},
+    {'is-plain': plain, 'is-disabled': disabled, 'is-round': round, 'is-loading': loading},
     'xu-button--'+size
     ]"
   >
-    <i v-if="icon !== ''" :class="icon"></i>
+    <i class="xu-icon-loading" v-if="loading"></i>
+    <i :class="icon" v-if="icon && !loading"></i>
     <span><slot></slot></span>
   </button>
 </template>
@@ -31,7 +32,8 @@
       },
       plain: Boolean,
       disabled: Boolean,
-      round: Boolean
+      round: Boolean,
+      loading: Boolean
     },
     data () {
       return {
