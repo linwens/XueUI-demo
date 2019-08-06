@@ -11,6 +11,8 @@
 - ` unit test ` 单元测试编写
 - ` scss ` ` bem ` ` postcss-salad `编写规范及写法
 - ` theme-default ` 有没有办法加一个.scss就自动往index.scss写入
+- ` .sh ` 文件写一个，知道是干嘛的
+- 放弃 ` postcss-salad `,` gulp-autoprefixer ` 直接写 ` mixin ` 去编译样式
 
 ----
 

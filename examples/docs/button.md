@@ -129,6 +129,7 @@
 <div class="demo-block">
   <xu-button icon="xu-icon-taobao" type="primary"></xu-button>
   <xu-button icon="xu-icon-loading" type="primary"></xu-button>
+  <xu-button icon="xu-icon-google" type="primary">谷歌</xu-button>
 </div>
 
 ::: demo
@@ -136,6 +137,7 @@
 
   <xu-button icon="xu-icon-taobao" type="primary"></xu-button>
   <xu-button icon="xu-icon-loading" type="primary"></xu-button>
+  <xu-button icon="xu-icon-google" type="primary">谷歌</xu-button>
 
 ```
 :::
@@ -150,6 +152,7 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
   <xu-button>默认尺寸</xu-button>
   <xu-button size="medium">中等按钮</xu-button>
   <xu-button size="small">小型按钮</xu-button>
+  <xu-button size="mini">超小按钮</xu-button>
 </div>
 
 ::: demo
@@ -158,7 +161,7 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 <xu-button>默认尺寸</xu-button>
 <xu-button size="medium">中等按钮</xu-button>
 <xu-button size="small">小型按钮</xu-button>
-<xu-button size="mini">小型按钮</xu-button>
+<xu-button size="mini">超小按钮</xu-button>
 
 ```
 :::

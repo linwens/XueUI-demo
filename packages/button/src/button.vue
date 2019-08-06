@@ -10,7 +10,7 @@
     ]"
   >
     <i v-if="icon !== ''" :class="icon"></i>
-    <slot></slot>
+    <span><slot></slot></span>
   </button>
 </template>
 <script>

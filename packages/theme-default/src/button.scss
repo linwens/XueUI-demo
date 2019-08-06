@@ -1,13 +1,17 @@
-@import "common/variables.scss";
+@charset "UTF-8";
+@import "common/var";
+@import "mixins/button";
+@import "mixins/mixins";
+@import "mixins/utils";
 
-@b xu-button {
+@include b(button) {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: #fff;
+  background: $--color-white;
   border: $--border-width-base $--border-style-base $--border-color-base;
-  color: #1f2d3d;
+  color: $--color-black;
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
@@ -17,63 +21,245 @@
   padding: 12px 20px;
   font-size: $--font-size-base;
   transition: .1s;
-  cursor: pointer;
 
-  @when round {
-    border-radius: 20px;
+  & [class*="xu-icon-"] {
+    & + span {
+      margin-left: 5px;
+    }
   }
-  @m medium {
+  @include m(medium) {
     font-size: $--font-size-base;
     border-radius: 4px;
     padding: 10px 20px;
   }
-  @m small {
+  @include m(small) {
     font-size: $--font-size-small;
     border-radius: 3px;
     padding: 9px 15px;
   }
-  @m mini {
+  @include m(mini) {
     font-size: $--font-size-small;
     border-radius: 3px;
     padding: 7px 15px;
   }
-  @m default {
-    
+  
+  @include m(default) {
+    &:hover,
+    &:focus {
+      background: adjust-color($--color-primary, $alpha: -0.9);
+      border-color: adjust-color($--color-primary, $alpha: -0.2);
+      color: $--color-primary;
+    }
+    &:active {
+      
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: $--color-white;
+      border: $--border-width-base $--border-style-base $--border-color-base;
+      color: $--color-black;
+    }
+    @include when(plain) {
+      &:hover,
+      &:focus {
+        background: $--color-white;
+        border-color: adjust-color($--color-primary, $alpha: -0.2);
+        color: $--color-primary;
+      }
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background: $--color-white;
+        border: $--border-width-base $--border-style-base $--border-color-base;
+        color: $--color-black;
+      }
+    }
   }
-  @m primary {
+  @include m(primary) {
     background-color: $--color-primary;
+    border: $--border-width-base $--border-style-base $--color-primary;
     color: $--color-white;
+    &:hover,
+    &:focus {
+      background: adjust-color($--color-primary, $alpha: -0.1);
+      border-color: adjust-color($--color-primary, $alpha: -0.1);
+      color: $--color-white;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: $--color-primary;
+      border: $--border-width-base $--border-style-base $--color-primary;
+      color: $--color-white;
+    }
+    @include when(plain) {
+      background: adjust-color($--color-primary, $alpha: -0.9);
+      border-color: adjust-color($--color-primary, $alpha: -0.2);
+      color: $--color-primary;
+      &:hover,
+      &:focus {
+        background-color: $--color-primary;
+        border: $--border-width-base $--border-style-base $--color-primary;
+        color: $--color-white;
+      }
+      &:disabled {
+        background: adjust-color($--color-primary, $alpha: -0.9);
+        border-color: adjust-color($--color-primary, $alpha: -0.2);
+        color: $--color-primary;
+      }
+    }
   }
-  @m success {
+  @include m(success) {
     background-color: $--color-success;
+    border: $--border-width-base $--border-style-base $--color-success;
     color: $--color-white;
+    &:hover,
+    &:focus {
+      background: adjust-color($--color-success, $alpha: -0.1);
+      border-color: adjust-color($--color-success, $alpha: -0.1);
+      color: $--color-white;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: $--color-success;
+      border: $--border-width-base $--border-style-base $--color-success;
+      color: $--color-white;
+    }
+    @include when(plain) {
+      background: adjust-color($--color-success, $alpha: -0.9);
+      border-color: adjust-color($--color-success, $alpha: -0.2);
+      color: $--color-success;
+      &:hover,
+      &:focus {
+        background-color: $--color-success;
+        border: $--border-width-base $--border-style-base $--color-success;
+        color: $--color-white;
+      }
+      &:disabled {
+        background: adjust-color($--color-success, $alpha: -0.9);
+        border-color: adjust-color($--color-success, $alpha: -0.2);
+        color: $--color-success;
+      }
+    }
   }
-  @m info {
+  @include m(info) {
     background-color: $--color-info;
+    border: $--border-width-base $--border-style-base $--color-info;
     color: $--color-white;
+    &:hover,
+    &:focus {
+      background: adjust-color($--color-info, $alpha: -0.1);
+      border-color: adjust-color($--color-info, $alpha: -0.1);
+      color: $--color-white;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: $--color-info;
+      border: $--border-width-base $--border-style-base $--color-info;
+      color: $--color-white;
+    }
+    @include when(plain) {
+      background: adjust-color($--color-info, $alpha: -0.9);
+      border-color: adjust-color($--color-info, $alpha: -0.2);
+      color: $--color-info;
+      &:hover,
+      &:focus {
+        background-color: $--color-info;
+        border: $--border-width-base $--border-style-base $--color-info;
+        color: $--color-white;
+      }
+      &:disabled {
+        background: adjust-color($--color-info, $alpha: -0.9);
+        border-color: adjust-color($--color-info, $alpha: -0.2);
+        color: $--color-info;
+      }
+    }
   }
-  @m warning {
+  @include m(warning) {
     background-color: $--color-warning;
+    border: $--border-width-base $--border-style-base $--color-warning;
     color: $--color-white;
+    &:hover,
+    &:focus {
+      background: adjust-color($--color-warning, $alpha: -0.1);
+      border-color: adjust-color($--color-warning, $alpha: -0.1);
+      color: $--color-white;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: $--color-warning;
+      border: $--border-width-base $--border-style-base $--color-warning;
+      color: $--color-white;
+    }
+    @include when(plain) {
+      background: adjust-color($--color-warning, $alpha: -0.9);
+      border-color: adjust-color($--color-warning, $alpha: -0.2);
+      color: $--color-warning;
+      &:hover,
+      &:focus {
+        background-color: $--color-warning;
+        border: $--border-width-base $--border-style-base $--color-warning;
+        color: $--color-white;
+      }
+      &:disabled {
+        background: adjust-color($--color-warning, $alpha: -0.9);
+        border-color: adjust-color($--color-warning, $alpha: -0.2);
+        color: $--color-warning;
+      }
+    }
   }
-  @m danger {
+  @include m(danger) {
     background-color: $--color-danger;
+    border: $--border-width-base $--border-style-base $--color-danger;
     color: $--color-white;
+    &:hover,
+    &:focus {
+      background: adjust-color($--color-danger, $alpha: -0.1);
+      border-color: adjust-color($--color-danger, $alpha: -0.1);
+      color: $--color-white;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: $--color-danger;
+      border: $--border-width-base $--border-style-base $--color-danger;
+      color: $--color-white;
+    }
+    @include when(plain) {
+      background: adjust-color($--color-danger, $alpha: -0.9);
+      border-color: adjust-color($--color-danger, $alpha: -0.2);
+      color: $--color-danger;
+      &:hover,
+      &:focus {
+        background-color: $--color-danger;
+        border: $--border-width-base $--border-style-base $--color-danger;
+        color: $--color-white;
+      }
+      &:disabled {
+        background: adjust-color($--color-danger, $alpha: -0.9);
+        border-color: adjust-color($--color-danger, $alpha: -0.2);
+        color: $--color-danger;
+      }
+    }
   }
-  @when plain {
-    color: $--color-old-primary;
-    font-size: $--font-size-large;
+
+  @include when(round) {
+    border-radius: 20px;
   }
-  @when opacity {
+  @include when(opacity) {
     opacity: 0.6;
   }
-  @when disabled {
+  @include when(disabled) {
     cursor: not-allowed;
   }
-  @when shadow {
+  @include when(shadow) {
     box-shadow: 0px 4px 12px 0px rgba(53, 86, 189, 0.3);
   }
-  @when square {
+  @include when(square) {
     border-radius: 0px
   }
 }

@@ -1,8 +1,8 @@
-  /* Colors
+/* Colors
   -------------------------- */
   $--color-white: #ffffff;
   $--color-black: #000000;
-  
+
   $--color-old-primary: #628cf5;
   $--color-primary: #628cf5;
   $--color-primary-light-1: #168fcb;
@@ -22,6 +22,8 @@
   $--color-text-secondary: #909399;
   $--color-text-placeholder: #c0c4cc;
   
+  // calc color
+  $--color-base-black: adjust-color($--color-primary, $hue: +6deg, $saturation: 33%, $lightness: 18%);
   /* Border
   -------------------------- */
   $--border-width-base: 1px;

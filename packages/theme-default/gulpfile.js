@@ -6,7 +6,7 @@ const sass = require('gulp-sass')
 const cssmin = require('gulp-cssmin')
 const salad = require('postcss-salad')(require('./salad.config.json')) // 使用 bem 风格来对 css 进行命名
 
-function compile(done) {
+function compile (done) {
   return src('./src/index.scss')
     .pipe(sass.sync())
     .pipe(postcss([salad]))
@@ -14,15 +14,15 @@ function compile(done) {
     .pipe(dest('./lib'))
 }
 
-function copyFont(done) {
+function copyFont (done) {
   return src('./src/fonts/**').pipe(dest('./lib/fonts'))
 }
 
-function watchCss(done) {
+function watchCss (done) {
   return watch('./src/*.scss', parallel(compile))
 }
 
-function watchFonts(done) {
+function watchFonts (done) {
   return watch('./src/fonts/**', copyFont)
 }
 
