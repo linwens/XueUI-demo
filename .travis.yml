@@ -1,3 +1,5 @@
+# after_success：执行完测试后，发布到GitHub pages
+
 sudo: false
 language: node_js
 node_js: 10
@@ -6,3 +8,7 @@ addons:
 before_script:
   - "sudo chown root /opt/google/chrome/chrome-sandbox"
   - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
+script:
+  - npm run test
+after_success:
+- sh build/release.sh

@@ -16,7 +16,8 @@
     "test": "karma start tests/unit/karma.conf.js --single-run",
     "lib": "vue-cli-service build --target lib --name xr-ui --dest lib packages/index.js",
     "build:entry": "node build/build-entry.js ",
-    "publish:docs": "node build/publish-docs.js"
+    "publish:docs": "node build/publish-docs.js",
+    "release": "sh build/release.sh"
   },
   "dependencies": {
     "core-js": "^2.6.5",
