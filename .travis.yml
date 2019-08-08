@@ -14,10 +14,21 @@ after_success:
   - sh build/release.sh
 
 # 发布npm包
-deploy:
-  provider: npm
-  email: "${NPM_EMAIL}"
-  api_key: "${NPM_TOKEN}"
+jobs:
+  include:
+    - stage: npm release
+      node_js: "8"
+      script: npm run lib
+      before_deploy:
+        - cd lib
+      deploy:
+        provider: npm
+        email: "${NPM_EMAIL}"
+        api_key: "${NPM_TOKEN}"
+        skip_cleanup: true
+        on:
+          tags: true,
+          branch: master
 
 # 指定分支，只有指定的分支提交时才会运行脚本
 branches:
