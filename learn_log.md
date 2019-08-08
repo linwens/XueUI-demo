@@ -11,6 +11,8 @@
 - OK` unit test ` 单元测试编写 ` mocha `, ` chai `, ` sinon `
 - OK` karma ` 做自动化测试
 - ` travis.ci `集成化测试
+ - 集成release命令，不走之前的ghpages插件，但是逻辑相同，只是直接通过一系列的git命令去打包发布到gh-page分支上
+ 
 - ` scss ` ` bem ` ` postcss-salad `编写规范及写法
 - ` theme-default ` 有没有办法加一个.scss就自动往index.scss写入
 - ` .sh ` 文件写一个，知道是干嘛的

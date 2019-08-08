@@ -4,12 +4,12 @@ npm run build:entry
 # 打包lib
 npm run lib
 
-# 发布到GitHub页面
+# 打包dist，并发布到gh-page分支上，实现展示页面的更新，(下面涉及的变量在travis网站上配置)
 npm run build
 cd ./dist
 git init
 git config user.name "${U_NAME}"
 git config user.email "${U_EMAIL}"
 git add .
-git commit -m "Update tools"
+git commit -m "${COMMIT_M}"
 git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
