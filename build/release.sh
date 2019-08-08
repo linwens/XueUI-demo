@@ -5,4 +5,11 @@ npm run build:entry
 npm run lib
 
 # 发布到GitHub页面
-npm run publish:docs
+npm run build
+cd ./dist
+git init
+git config user.name "${U_NAME}"
+git config user.email "${U_EMAIL}"
+git add .
+git commit -m "Update tools"
+git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
