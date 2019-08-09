@@ -1,5 +1,4 @@
-# xueui-demo
-
+# xueui-demo [![Build Status](https://www.travis-ci.org/linwens/xueui-demo.svg?branch=master)](https://www.travis-ci.org/linwens/xueui-demo)
 ## Project setup
 ```
 npm install
