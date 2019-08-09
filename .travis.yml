@@ -23,7 +23,7 @@ deploy:
   skip_cleanup: true
   api_key: "${NPM_TOKEN}"
   on:
-    tags: true, # git tag 打标签才发包
+    tags: true # git tag 打标签才发包
     # branch: master # master分支push才发包
   tag: latest
 
