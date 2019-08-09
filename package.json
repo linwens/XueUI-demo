@@ -14,7 +14,7 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test": "karma start tests/unit/karma.conf.js --single-run",
-    "lib": "vue-cli-service build --target lib --name xr-ui --dest lib packages/index.js",
+    "lib": "vue-cli-service build --target lib --name xue-ui --dest lib packages/index.js",
     "build:entry": "node build/build-entry.js ",
     "publish:docs": "node build/publish-docs.js",
     "release": "sh build/release.sh"
