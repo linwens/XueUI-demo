@@ -24,7 +24,7 @@ deploy:
   api_key: "${NPM_TOKEN}"
   on:
     tags: true, # git tag 打标签才发包
-    branch: master # master分支push才发包
+    # branch: master # master分支push才发包
   tag: latest
 
 # 指定分支，只有指定的分支提交时才会运行脚本
