@@ -16,6 +16,7 @@ after_success:
 # 发布npm包
 node_js: "8"
 before_deploy: 
+  - npm run clean
   - npm run lib
 deploy:
   provider: npm
