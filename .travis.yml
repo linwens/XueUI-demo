@@ -30,7 +30,7 @@ deploy:
 # 指定分支，只有指定的分支提交时才会运行脚本
 branches:
   only:
-    - master
+    # - master  # git中的tag也属于一个分支，如果只能master，tag commit就不会生效
 
 # 定义环境变量
 env:
