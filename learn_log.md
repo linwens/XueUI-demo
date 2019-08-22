@@ -7,7 +7,7 @@
 - ` markdown ` 转 ` html `需要本地化一下
 - ` md.scss ` 需要本地化一下
 - OK` packages.json ` 执行脚本集成
-- ` CHANGELOG ` 增加更新日志
+- OK` CHANGELOG ` 增加更新日志
 - OK` unit test ` 单元测试编写 ` mocha `, ` chai `, ` sinon `
 - OK` karma ` 做自动化测试
 - ` travis.ci `集成化测试
@@ -24,7 +24,7 @@
 
 - ` lib ` : 打包发布UI库
 - ` build:entry ` : 添加新组件后自动install组件
-- ` publish:docs ` : 打包发布文档页面
+- (废弃)` publish:docs ` : 打包发布文档页面(通过travis打包，删除该命令及对应脚本)
 
 # examples
 
@@ -68,7 +68,7 @@
 
 ## build/publish-docs.js
 
-通过gh-pages打包静态资源直接发布到GitHub page; 注意要做项目地址建一个gh-pages分支，用来存放打包后页面
+（废弃）通过gh-pages打包静态资源直接发布到GitHub page; 注意要做项目地址建一个gh-pages分支，用来存放打包后页面
 
 ----
 
