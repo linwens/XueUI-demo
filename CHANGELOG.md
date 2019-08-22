@@ -1,4 +1,9 @@
-## [0.1.7](https://github.com/linwens/xueui-demo/compare/v0.1.6...v0.1.7) (2019-08-22)
+## [0.1.8](https://github.com/linwens/xueui-demo/compare/v0.1.6...v0.1.8) (2019-08-22)
+
+
+### Features
+
+* **test:** 测试changelog为啥不展示 ([15e415e](https://github.com/linwens/xueui-demo/commit/15e415e))
 
 
 
