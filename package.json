@@ -9,6 +9,7 @@
   "private": false,
   "license": "MIT",
   "scripts": {
+    "init": "npm install commitizen -g && commitizen init cz-conventional-changelog --save-dev --save-exact",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -19,7 +20,8 @@
     "clean": "rimraf lib && rimraf packages/*/lib",
     "build:style": "gulp build --gulpfile packages/theme-default/gulpfile.js && cp-cli packages/theme-default/lib lib/theme-default",
     "publish:docs": "node build/publish-docs.js",
-    "release": "sh build/release.sh"
+    "release": "sh build/release.sh",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -37,6 +39,7 @@
     "chai": "^4.1.2",
     "cheerio": "^1.0.0-rc.3",
     "cp-cli": "^2.0.0",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "gh-pages": "^2.1.0",
@@ -65,5 +68,10 @@
     "vue-loader": "^15.7.1",
     "vue-markdown-loader": "^2.4.1",
     "vue-template-compiler": "^2.6.10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
