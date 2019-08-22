@@ -1,6 +1,6 @@
 {
   "name": "xueui-demo",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "基于 vue-cli3 的 UI 组件库",
   "main": "lib/xr-ui.umd.min.js",
   "keywords": [
