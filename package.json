@@ -1,6 +1,6 @@
 {
   "name": "xueui-demo",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "基于 vue-cli3 的 UI 组件库",
   "main": "lib/xr-ui.umd.min.js",
   "keywords": [
@@ -38,6 +38,7 @@
     "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
     "cheerio": "^1.0.0-rc.3",
+    "conventional-changelog-cli": "^2.0.23",
     "cp-cli": "^2.0.0",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^5.16.0",
@@ -62,6 +63,7 @@
     "sass-loader": "^7.1.0",
     "sinon": "^7.4.1",
     "sinon-chai": "^3.3.0",
+    "standard-version": "^7.0.0",
     "striptags": "^3.1.1",
     "transliteration": "^2.1.4",
     "uppercamelcase": "^3.0.0",
