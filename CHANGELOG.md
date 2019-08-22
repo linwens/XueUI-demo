@@ -1,3 +1,15 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.1.9](https://github.com/linwens/xueui-demo/compare/v0.1.6...v0.1.9) (2019-08-22)
+
+
+### Features
+
+* **build:** git cz生成标准message,standard-version发版 ([1d5732f](https://github.com/linwens/xueui-demo/commit/1d5732f))
+* **test:** 测试changelog为啥不展示 ([15e415e](https://github.com/linwens/xueui-demo/commit/15e415e))
+
 ## [0.1.8](https://github.com/linwens/xueui-demo/compare/v0.1.6...v0.1.8) (2019-08-22)
 
 
@@ -25,6 +37,3 @@
 
 
 ## 0.1.2 (2019-08-09)
-
-
-
