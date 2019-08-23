@@ -12,6 +12,7 @@ script:
   - npm run test
 after_success:
   - cat ./tests/unit/coverage/lcov.info | ./node_modules/.bin/coveralls -repotoken ${REPO_TOKEN}
+  - rm -rf ./tests/unit/coverage
 
 # 发布npm包、生成gh-page
 node_js: "8"
