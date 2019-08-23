@@ -12,7 +12,7 @@ module.exports = function (config) {
     ],
     // 对指定文件进行预处理
     preprocessors: {
-      '**/*.spec.js': ['webpack', 'sourcemap']
+      '**/*.spec.js': ['webpack', 'sourcemap', 'coverage']
     },
     // webpack打包规则
     webpack: webpackConfig,
