@@ -1,4 +1,5 @@
-# xueui-demo [![Build Status](https://www.travis-ci.org/linwens/xueui-demo.svg?branch=master)](https://www.travis-ci.org/linwens/xueui-demo)
+# xueui-demo 
+[![Build Status](https://www.travis-ci.org/linwens/xueui-demo.svg?branch=master)](https://www.travis-ci.org/linwens/xueui-demo) [![Coverage Status](https://coveralls.io/repos/github/linwens/xueui-demo/badge.svg?branch=master)](https://coveralls.io/github/linwens/xueui-demo?branch=master) 
 ## Project setup
 ```
 npm install

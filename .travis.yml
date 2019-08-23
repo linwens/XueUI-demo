@@ -11,12 +11,13 @@ before_script:
 script:
   - npm run test
 after_success:
-  - sh build/release.sh
+  - cat ./test/unit/coverage/lcov.info | ./node_modules/.bin/coveralls
 
-# 发布npm包
+# 发布npm包、生成gh-page
 node_js: "8"
 before_deploy: 
-  - sh build/deploy-ci.sh
+  - sh build/deploy-ci.sh # 打包npm
+  - sh build/release.sh  # 生成gh-page
 deploy:
   provider: npm
   email: "${NPM_EMAIL}"
