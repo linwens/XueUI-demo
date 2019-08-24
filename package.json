@@ -9,7 +9,8 @@
   "private": false,
   "license": "MIT",
   "scripts": {
-    "init": "npm install commitizen -g && commitizen init cz-conventional-changelog --save-dev --save-exact",
+    "init": "npm install commitizen -g && commitizen init cz-conventional-changelog --save-dev --save-exact && npm run gulp:init",
+    "gulp:init": "npm install && cd ./packages/theme-default && npm install",
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build",
@@ -36,6 +37,7 @@
     "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
     "cheerio": "^1.0.0-rc.3",
+    "commitizen": "^4.0.3",
     "conventional-changelog-cli": "^2.0.23",
     "coveralls": "^3.0.6",
     "cp-cli": "^2.0.0",
