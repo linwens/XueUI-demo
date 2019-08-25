@@ -18,7 +18,7 @@ after_success:
 node_js: "8"
 before_deploy: 
   - sh build/deploy-ci.sh # 打包npm
-  - sh build/release.sh  # 生成gh-page
+  - sh build/deploy-ghpage.sh  # 生成gh-page
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
