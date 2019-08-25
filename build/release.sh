@@ -8,7 +8,7 @@ echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   # standard-verson修改version
-  npm run version -m "[release]: $VERSION" -r $VERSION
+  npm run version -- -m "[release]: $VERSION" -r $VERSION
   # 发版
-  git push origin master $VERSION
+  git push origin master "v$VERSION"
 fi
