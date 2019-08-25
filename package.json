@@ -11,7 +11,7 @@
   "scripts": {
     "init": "npm install commitizen -g && commitizen init cz-conventional-changelog --save-dev --save-exact && npm run gulp:init",
     "gulp:init": "npm install && cd ./packages/theme-default && npm install",
-    "serve": "vue-cli-service serve",
+    "dev": "npm run build:entry && vue-cli-service serve",
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build",
     "build:entry": "node build/build-entry.js ",

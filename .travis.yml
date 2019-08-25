@@ -11,7 +11,7 @@ before_script:
 script:
   - npm run test
 after_success:
-  - cat ./tests/unit/coverage/lcov.info | ./node_modules/.bin/coveralls -repotoken ${REPO_TOKEN}
+  - cat ./tests/unit/coverage/lcov.info | ./node_modules/.bin/coveralls -repotoken $REPO_TOKEN
   - rm -rf ./tests/unit/coverage
 
 # 发布npm包、生成gh-page
@@ -21,9 +21,9 @@ before_deploy:
   - sh build/release.sh  # 生成gh-page
 deploy:
   provider: npm
-  email: "${NPM_EMAIL}"
+  email: "$NPM_EMAIL"
   skip_cleanup: true
-  api_key: "${NPM_TOKEN}"
+  api_key: "$NPM_TOKEN"
   on:
     tags: true # git tag 打标签才发包
     # branch: master # master分支push才发包
@@ -33,7 +33,3 @@ deploy:
 branches:
   only:
     # - master  # git中的tag也属于一个分支，如果只能master，tag commit就不会生效
-
-# 定义环境变量
-env:
-  - COMMIT_M="发布gh-page的文字描述"
