@@ -3,7 +3,7 @@
 import XuButton from './button'
 import XuIcon from './icon'
 import XuTest from './test'
-const version = '0.1.0'
+const version = '0.4.0'
 const components = [
   XuButton,
   XuIcon,
