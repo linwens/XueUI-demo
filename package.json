@@ -64,7 +64,7 @@
     "sass-loader": "^7.1.0",
     "sinon": "^7.4.1",
     "sinon-chai": "^3.3.0",
-    "standard-version": "^7.0.0",
+    "standard-version": "^8.0.1",
     "striptags": "^3.1.1",
     "transliteration": "^2.1.4",
     "uppercamelcase": "^3.0.0",
