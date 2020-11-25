@@ -46,7 +46,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "gulp": "^4.0.2",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^10.1.2",
     "karma": "^4.2.0",
     "karma-chrome-launcher": "^3.0.0",
     "karma-coverage": "^1.1.2",
